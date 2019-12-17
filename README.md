@@ -1,5 +1,5 @@
 ![](https://i.imgur.com/xeKD93p.png)
-# `$raspap` [![Release 2.1](https://img.shields.io/badge/Release-2.1-green.svg)](https://github.com/billz/raspap-webgui/releases) [![Awesome](https://awesome.re/badge.svg)](https://github.com/thibmaek/awesome-raspberry-pi) [![Sponsor](https://img.shields.io/badge/sponsor-%F0%9F%92%96-green)](https://github.com/sponsors/billz)
+# `$raspap` [![Release 2.1](https://img.shields.io/badge/Release-2.1-green.svg)](https://github.com/jordiblanchcarles/raspap-webgui/releases) [![Awesome](https://awesome.re/badge.svg)](https://github.com/thibmaek/awesome-raspberry-pi) [![Sponsor](https://img.shields.io/badge/sponsor-%F0%9F%92%96-green)](https://github.com/sponsors/billz)
 
 A simple, responsive web interface to control wifi, hostapd and related services on the Raspberry Pi.
 
@@ -46,7 +46,7 @@ Install RaspAP from your RaspberryPi's shell prompt:
 ```sh
 curl -sL https://install.raspap.com | bash
 ```
-The [installer](https://github.com/billz/raspap-webgui/wiki/Quick-Installer-usage) will complete the steps in the manual installation (below) for you.
+The [installer](https://github.com/jordiblanchcarles/raspap-webgui/wiki/Quick-Installer-usage) will complete the steps in the manual installation (below) for you.
 
 After the reboot at the end of the installation the wireless network will be
 configured as an access point as follows:
@@ -57,20 +57,20 @@ configured as an access point as follows:
 * SSID: `raspi-webgui`
 * Password: ChangeMe
 
-**Note:** As the name suggests, the Quick Installer is a great way to quickly setup a new AP. However, it does not automagically detect the unique configuration of your RPi. Best results are obtained by connecting an RPi to ethernet (`eth0`) or as a WiFi client, also known as managed mode, with `wlan0`. For the latter, refer to [this FAQ](https://github.com/billz/raspap-webgui/wiki/FAQs#how-do-i-prepare-the-sd-card-to-connect-to-wifi-in-headless-mode). Please [read this](https://github.com/billz/raspap-webgui/wiki/Reporting-issues) before reporting an issue.
+**Note:** As the name suggests, the Quick Installer is a great way to quickly setup a new AP. However, it does not automagically detect the unique configuration of your RPi. Best results are obtained by connecting an RPi to ethernet (`eth0`) or as a WiFi client, also known as managed mode, with `wlan0`. For the latter, refer to [this FAQ](https://github.com/jordiblanchcarles/raspap-webgui/wiki/FAQs#how-do-i-prepare-the-sd-card-to-connect-to-wifi-in-headless-mode). Please [read this](https://github.com/jordiblanchcarles/raspap-webgui/wiki/Reporting-issues) before reporting an issue.
 
 ## Simultaneous AP and Wifi client
 RaspAP lets you easily create an AP with a Wifi client configuration. With your RPi configured in managed mode, enable the AP from the **Advanced** tab of **Configure hotspot** by sliding the **Wifi client AP mode** toggle. Save settings and start the hotspot. The managed mode AP is functional without restart.
 
 ![](https://i.imgur.com/YObvd32.gif)
 
-**Note:** For a Raspberry Pi operating in [managed mode](https://github.com/billz/raspap-webgui/wiki/FAQs#how-do-i-prepare-the-sd-card-to-connect-to-wifi-in-headless-mode) without an `eth0` connection, this configuration must be enabled _before_ a reboot. 
+**Note:** For a Raspberry Pi operating in [managed mode](https://github.com/jordiblanchcarles/raspap-webgui/wiki/FAQs#how-do-i-prepare-the-sd-card-to-connect-to-wifi-in-headless-mode) without an `eth0` connection, this configuration must be enabled _before_ a reboot. 
 
 ## Support us
 
-RaspAP is free software, but powered by your support. If you find RaspAP useful for your personal or commercial projects, please [become a sponsor](https://github.com/sponsors/billz) or make a one-time donation with [Beerpay](https://beerpay.io/billz/raspap-webgui). Either option makes a big difference!
+RaspAP is free software, but powered by your support. If you find RaspAP useful for your personal or commercial projects, please [become a sponsor](https://github.com/sponsors/billz) or make a one-time donation with [Beerpay](https://beerpay.io/jordiblanchcarles/raspap-webgui). Either option makes a big difference!
 
-[![Beerpay](https://beerpay.io/billz/raspap-webgui/badge.svg)](https://beerpay.io/billz/raspap-webgui)
+[![Beerpay](https://beerpay.io/jordiblanchcarles/raspap-webgui/badge.svg)](https://beerpay.io/jordiblanchcarles/raspap-webgui)
 
 ## Manual installation
 These steps apply to the latest release of Raspbian (currently [Buster](https://www.raspberrypi.org/downloads/raspbian/)). Notes for previously released versions are provided, where applicable. Start off by installing git, lighttpd, php7, hostapd and dnsmasq. 
@@ -125,7 +125,7 @@ Once those modifications are done, git clone the files to `/var/www/html`.
 `/var/www` instead.
 ```sh
 sudo rm -rf /var/www/html
-sudo git clone https://github.com/billz/raspap-webgui /var/www/html
+sudo git clone https://github.com/jordiblanchcarles/raspap-webgui /var/www/html
 ```
 Move the high-res favicons to the web root.
 ```
@@ -195,7 +195,7 @@ sudo reboot
 The default username is 'admin' and the default password is 'secret'.
 
 ## Multilingual support
-RaspAP uses [GNU Gettext](https://www.gnu.org/software/gettext/) to manage multilingual messages. In order to use RaspAP with one of our supported translations, you must configure a corresponding language package on your RPi. To list languages currently installed on your system, use `locale -a` at the shell prompt. To generate new locales, run `sudo dpkg-reconfigure locales` and select any other desired locales. Details are provided on our [wiki](https://github.com/billz/raspap-webgui/wiki/Translations#raspap-in-your-language). 
+RaspAP uses [GNU Gettext](https://www.gnu.org/software/gettext/) to manage multilingual messages. In order to use RaspAP with one of our supported translations, you must configure a corresponding language package on your RPi. To list languages currently installed on your system, use `locale -a` at the shell prompt. To generate new locales, run `sudo dpkg-reconfigure locales` and select any other desired locales. Details are provided on our [wiki](https://github.com/jordiblanchcarles/raspap-webgui/wiki/Translations#raspap-in-your-language). 
 
 The following translations are currently maintained by the project:
 
@@ -217,10 +217,10 @@ The following translations are currently maintained by the project:
 - Sinhala
 - Türkçe
 
-If your language is not in the list above, why not [contribute a translation](https://github.com/billz/raspap-webgui/wiki/Translations#contributing-a-translation)? Contributors will receive credit as the original translators.
+If your language is not in the list above, why not [contribute a translation](https://github.com/jordiblanchcarles/raspap-webgui/wiki/Translations#contributing-a-translation)? Contributors will receive credit as the original translators.
 
 ## HTTPS support
-The Quick Installer may be used to [generate SSL certificates](https://github.com/billz/raspap-webgui/wiki/SSL-certificates-(Quick-Installer)) with `mkcert`. The installer automates the manual steps [described in the wiki](https://github.com/billz/raspap-webgui/wiki/SSL-(Manual-steps)), including configuring lighttpd with SSL support. 
+The Quick Installer may be used to [generate SSL certificates](https://github.com/jordiblanchcarles/raspap-webgui/wiki/SSL-certificates-(Quick-Installer)) with `mkcert`. The installer automates the manual steps [described in the wiki](https://github.com/jordiblanchcarles/raspap-webgui/wiki/SSL-(Manual-steps)), including configuring lighttpd with SSL support. 
 
 Simply append the `-c` or `--cert` option to the Quick Installer, like so:
 
@@ -230,7 +230,7 @@ curl -sL https://install.raspap.com | bash -s -- --cert
 
 **Note**: this only installs mkcert and generates an SSL certificate with the input you provide. It does *not* (re)install RaspAP.
 
-More information on SSL certificates and HTTPS support is available [on our wiki](https://github.com/billz/raspap-webgui/wiki/SSL-certificates-(Quick-Installer)). 
+More information on SSL certificates and HTTPS support is available [on our wiki](https://github.com/jordiblanchcarles/raspap-webgui/wiki/SSL-certificates-(Quick-Installer)). 
 
 ## OpenVPN support
 OpenVPN may be optionally installed by the Quick Installer. Once this is done, you can managage a client configuration and the `openvpn-client` service with RaspAP.
@@ -239,7 +239,7 @@ OpenVPN may be optionally installed by the Quick Installer. Once this is done, y
 
 To configure an OpenVPN client, upload a valid .ovpn file and, optionally, specify your login credentials. RaspAP will store your client configuration and add firewall rules to forward traffic from OpenVPN's `tun0` interface to your configured wireless interface. 
 
-**Note**: this feature is currently in beta. Please [read this](https://github.com/billz/raspap-webgui/wiki/FAQs#-openvpn-fails-to-start-andor-i-have-no-internet-help) before reporting an issue.
+**Note**: this feature is currently in beta. Please [read this](https://github.com/jordiblanchcarles/raspap-webgui/wiki/FAQs#-openvpn-fails-to-start-andor-i-have-no-internet-help) before reporting an issue.
 
 ## How to contribute
 
@@ -252,7 +252,7 @@ To configure an OpenVPN client, upload a valid .ovpn file and, optionally, speci
 This project follows the [PSR-2](http://www.php-fig.org/psr/psr-2/) coding style guidelines. There are many ways to check your code for PSR-2. An excellent tool is [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer). The command line tool `phpcs` can be run against any single file. [Phing](https://www.phing.info/), a PHP build tool, integrates nicely with `phpcs` to automate PSR-2 checks across all source files in a project.
 
 ## Reporting issues
-Please [read this](https://github.com/billz/raspap-webgui/wiki/Reporting-issues) before reporting a bug.
+Please [read this](https://github.com/jordiblanchcarles/raspap-webgui/wiki/Reporting-issues) before reporting a bug.
 
 ## License
 See the [LICENSE](./LICENSE) file.

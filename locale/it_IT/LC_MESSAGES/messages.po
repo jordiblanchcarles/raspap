@@ -1,5 +1,5 @@
 # RaspAP Portable Object file
-# Project home: https://github.com/billz/raspap-webgui
+# Project home: https://github.com/jordiblanchcarles/raspap-webgui
 # Licensed under the GNU General Public License v3.0
 # This file is distributed under the same license as the RaspAP package
 # FIRST AUTHOR Simone Rizzo <simone.rizzo@live.com>, 2017

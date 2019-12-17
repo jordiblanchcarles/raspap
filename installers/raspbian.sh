@@ -13,7 +13,7 @@
 # -o, --openvpn <flag>
 #    Used with -y, --yes, sets OpenVPN install option (0=no install)
 # -r, --repo, --repository <name>
-#    Overrides the default GitHub repo (billz/raspap-webgui)
+#    Overrides the default GitHub repo (jordiblanchcarles/raspap-webgui)
 # -b, --branch <name>
 #    Overrides the default git branch (master)
 # -h, --help
@@ -22,7 +22,7 @@
 #    Outputs release info and exits
 
 # Set defaults
-repo="billz/raspap-webgui"
+repo="jordiblanchcarles/raspap-webgui"
 branch="master"
 VERSION=$(curl -s "https://api.github.com/repos/$repo/releases/latest" | grep -Po '"tag_name": "\K.*?(?=")' )
 assume_yes=0
@@ -34,7 +34,7 @@ Usage: raspbian.sh [OPTION]\n
 -y, --yes, --assume-yes\n\tAssumes "yes" as an answer to all prompts
 -c, --cert, --certificate\n\tInstalls an SSL certificate for lighttpd
 -o, --openvpn <flag>\n\tUsed with -y, --yes, sets OpenVPN install option (0=no install)
--r, --repo, --repository <name>\n\tOverrides the default GitHub repo (billz/raspap-webgui)
+-r, --repo, --repository <name>\n\tOverrides the default GitHub repo (jordiblanchcarles/raspap-webgui)
 -b, --branch <name>\n\tOverrides the default git branch (master)
 -h, --help\n\tOutputs usage notes and exits
 -v, --version\n\tOutputs release info and exits\n

@@ -14,7 +14,7 @@
  * @author     Bill Zimmerman <billzimmerman@gmail.com>
  * @license    GNU General Public License, version 3 (GPL-3.0)
  * @version    2.1
- * @link       https://github.com/billz/raspap-webgui
+ * @link       https://github.com/jordiblanchcarles/raspap-webgui
  * @see        http://sirlagz.net/2013/02/08/raspap-webgui/
  */
 

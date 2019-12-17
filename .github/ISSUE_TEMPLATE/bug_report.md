@@ -8,7 +8,7 @@ assignees: ''
 ---
 
 **Before submitting an issue**
-Please read this first https://github.com/billz/raspap-webgui/wiki/Reporting-issues
+Please read this first https://github.com/jordiblanchcarles/raspap-webgui/wiki/Reporting-issues
 
 * [x] This is a bug report
 * [ ] I searched existing issues before opening this one
