@@ -266,10 +266,10 @@ function SaveHostAPDConfig($wpa_array, $enc_types, $modes, $interfaces, $status)
             $config.= 'require dhcp_server_identifier'.PHP_EOL;
             $config.= 'slaac private'.PHP_EOL;
             $config.= 'nohook lookup-hostname'.PHP_EOL;
-            $config.= 'interface '.RASPI_WIFI_CLIENT_INTERFACE.PHP_EOL;
+            /*$config.= 'interface '.RASPI_WIFI_CLIENT_INTERFACE.PHP_EOL;
             $config.= 'static ip_address='.$ip_address.PHP_EOL;
             $config.= 'static routers='.$routers.PHP_EOL;
-            $config.= 'static domain_name_server='.$domain_name_server.PHP_EOL;
+            $config.= 'static domain_name_server='.$domain_name_server.PHP_EOL;*/
         }
         file_put_contents("/tmp/dhcpddata", $config);
         system('sudo cp /tmp/dhcpddata '.RASPI_DHCPCD_CONFIG, $return);
