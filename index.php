@@ -18,6 +18,11 @@
  * @see        http://sirlagz.net/2013/02/08/raspap-webgui/
  */
 
+$whitelist = array(
+    '127.0.0.1',
+    '::1'
+);
+
 require('includes/csrf.php');
 ensureCSRFSessionToken();
 
@@ -27,7 +32,9 @@ include_once(RASPI_CONFIG.'/raspap.php');
 include_once('includes/locale.php');
 include_once('includes/functions.php');
 include_once('includes/dashboard.php');
-include_once('includes/authenticate.php');
+if(!in_array($_SERVER['REMOTE_ADDR'], $whitelist)){
+    include_once('includes/authenticate.php');
+}
 include_once('includes/admin.php');
 include_once('includes/dhcp.php');
 include_once('includes/hostapd.php');
